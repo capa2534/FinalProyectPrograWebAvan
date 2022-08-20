@@ -8664,19 +8664,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bito4\\.nuget\\packages\\": {}
+    "C:\\Users\\ceciliano\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repositorios\\FinalProyectPrograWebAvan\\Examen1\\Examen.DataAccess\\Examen.DataAccess.csproj",
+      "projectUniqueName": "\\\\Mac\\Home\\Desktop\\FinalProyectPrograWebAvan\\Examen1\\Examen.DataAccess\\Examen.DataAccess.csproj",
       "projectName": "Examen.DataAccess",
-      "projectPath": "D:\\Repositorios\\FinalProyectPrograWebAvan\\Examen1\\Examen.DataAccess\\Examen.DataAccess.csproj",
-      "packagesPath": "C:\\Users\\bito4\\.nuget\\packages\\",
-      "outputPath": "D:\\Repositorios\\FinalProyectPrograWebAvan\\Examen1\\Examen.DataAccess\\obj\\",
+      "projectPath": "\\\\Mac\\Home\\Desktop\\FinalProyectPrograWebAvan\\Examen1\\Examen.DataAccess\\Examen.DataAccess.csproj",
+      "packagesPath": "C:\\Users\\ceciliano\\.nuget\\packages\\",
+      "outputPath": "\\\\Mac\\Home\\Desktop\\FinalProyectPrograWebAvan\\Examen1\\Examen.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\bito4\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ceciliano\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8690,8 +8690,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Repositorios\\FinalProyectPrograWebAvan\\Examen1\\Examen.Models\\Examen.Models.csproj": {
-              "projectPath": "D:\\Repositorios\\FinalProyectPrograWebAvan\\Examen1\\Examen.Models\\Examen.Models.csproj"
+            "\\\\Mac\\Home\\Desktop\\FinalProyectPrograWebAvan\\Examen1\\Examen.Models\\Examen.Models.csproj": {
+              "projectPath": "\\\\Mac\\Home\\Desktop\\FinalProyectPrograWebAvan\\Examen1\\Examen.Models\\Examen.Models.csproj"
             }
           }
         }
@@ -8751,12 +8751,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.409\\RuntimeIdentifierGraph.json"
       }
     }
   }
