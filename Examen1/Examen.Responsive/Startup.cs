@@ -35,8 +35,8 @@ namespace Examen
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-           
-           services.RegisterInfrastructureServices(Configuration); //tambien
+
+            services.RegisterInfrastructureServices(Configuration); //tambien
 
             //para login y registro
             services.AddControllersWithViews()
@@ -58,17 +58,17 @@ namespace Examen
                     options.Cookie.SameSite = SameSiteMode.Lax;
                 }
                 );
-                //este de AddGoogle se agrega para la configuración
-               /* .AddGoogle(
+            //este de AddGoogle se agrega para la configuración
+            /* .AddGoogle(
 
-                    options =>
-                    {
-                        options.ClientId =
-                            Configuration.GetValue<string>("GoogleAuthenticationConfiguration:ClientId");
-                        options.ClientSecret =
-                            Configuration.GetValue<string>("GoogleAuthenticationConfiguration:ClientSecret");
-                    });*/
-;
+                 options =>
+                 {
+                     options.ClientId =
+                         Configuration.GetValue<string>("GoogleAuthenticationConfiguration:ClientId");
+                     options.ClientSecret =
+                         Configuration.GetValue<string>("GoogleAuthenticationConfiguration:ClientSecret");
+                 });*/
+            ;
 
             services.Configure<IdentityOptions>(
                 options =>
@@ -85,13 +85,21 @@ namespace Examen
                 (options => options.UseSqlServer(Configuration.GetConnectionString("Default")))
                     .AddUnitOfWork<ApplicationDbContext>()
                     .AddRepository<Rol, RolRepository>()
-                    .AddRepository<Empleado, EmpleadoRepository>(); 
+                    .AddRepository<Cliente, ClienteRepository>()
+                    .AddRepository<Auto, AutoRepository>()
+                    .AddRepository<Empleado, EmpleadoRepository>();
 
             services.AddScoped<IApplicationDbContext>
                 (options => options.GetService<ApplicationDbContext>());
 
             services.AddSingleton<ICartero, Cartero>();
             services.Configure<ConfiguracionSmtp>(Configuration.GetSection("ConfiguracionSmtp"));
+
+            services.Configure<ConfiguracionRecaptcha>(Configuration.GetSection("ConfiguracionRecaptcha"));
+
+            services.AddSingleton<IRecaptchaValidator, RecaptchaValidator>();
+
+
             services.AddControllersWithViews();
         }
 

@@ -1,9 +1,13 @@
-﻿using Examen.Models.InputModels;
+﻿using Examen.Contracts;
+using Examen.Models.ConfigurationModels;
+using Examen.Models.InputModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.AspNetCore.Hosting.Server.Features;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using System;
 using System.Linq;
 using System.Net;
 using System.Security.Claims;
@@ -11,18 +15,25 @@ using System.Threading.Tasks;
 
 namespace Examen.Controllers
 {
-    [Route("accounts")]
+    [Route("Accounts")]
     public class AccountsController : Controller
     {
         public AccountsController
              (
+                IOptions<ConfiguracionRecaptcha> configuracion, IRecaptchaValidator recaptcha,
                  IServer server,
                  UserManager<IdentityUser> userManager, SignInManager<IdentityUser> sessionManager)
         {
+            Configuracion = configuracion.Value;
+            Recaptcha = recaptcha;
+
             _server = server;
             _userManager = userManager;
             _sessionManager = sessionManager;
         }
+
+        ConfiguracionRecaptcha Configuracion;
+        IRecaptchaValidator Recaptcha;
 
         readonly IServer _server;
         readonly UserManager<IdentityUser> _userManager;
@@ -74,46 +85,75 @@ namespace Examen.Controllers
         //Posible código de Login, por favor verificar
 
 
-        
+
         [HttpGet]
         [Route("login")]
         public async Task<IActionResult> Login()
         {
+
+
             LoginInputModel model =
                 new LoginInputModel
                 {
+                    SiteKey = Configuracion.SiteKey,
+
                     ExternalLogins =
                         (await _sessionManager.GetExternalAuthenticationSchemesAsync()).ToList()
                 };
 
             return View(model);
         }
-        
 
 
+   
         [HttpPost]
+        [ValidateAntiForgeryToken]
         [Route("login")]
         public async Task<IActionResult> Login(LoginInputModel model)
         {
             if (ModelState.IsValid)
             {
-                var result =
-                    await _sessionManager.PasswordSignInAsync
-                        (model.Email, model.Password, isPersistent: false, lockoutOnFailure: false);
 
-                if (result.Succeeded)
+
+                try
                 {
-                    return RedirectToAction("index", "home");
+                    var result =
+                        await _sessionManager.PasswordSignInAsync
+                    (model.Email, model.Password, isPersistent: false, lockoutOnFailure: false);
+
+
+                    if (Recaptcha.Validate(model.Recaptcha))
+                    {
+                        
+                        if (result.Succeeded)
+                        {
+
+                            return RedirectToAction("index","home");
+                        }
+
+                    }
+                  
+
                 }
 
-                ModelState.AddModelError(string.Empty, "Session could not be started!");
-            }
+                catch (Exception ex)
+                {
+                    string[] messages = ex.Message.Split("\n", StringSplitOptions.RemoveEmptyEntries);
+                    foreach (var message in messages)
+                    {
+                        ModelState.AddModelError(string.Empty, message);
 
+
+                    }
+                }  return View(model);
+
+            }
             return View(model);
+
         }
-   
-        
-        
+
+
+
         [HttpPost]
         [Route("logout")]
         public async Task<IActionResult> Logout()
@@ -122,7 +162,7 @@ namespace Examen.Controllers
             return RedirectToAction("index", "home");
         }
 
-        
+
         [HttpPost]
         [Route("externallogin")]
         [AllowAnonymous]
@@ -145,12 +185,12 @@ namespace Examen.Controllers
             if (string.IsNullOrEmpty(returnUrl))
                 returnUrl = Url.Content("~/");
 
-                LoginInputModel model =
-                new LoginInputModel
-                {
-                    ReturnUrl = returnUrl,
-                    ExternalLogins = (await _sessionManager.GetExternalAuthenticationSchemesAsync()).ToList()
-                };
+            LoginInputModel model =
+            new LoginInputModel
+            {
+                ReturnUrl = returnUrl,
+                ExternalLogins = (await _sessionManager.GetExternalAuthenticationSchemesAsync()).ToList()
+            };
 
             if (!string.IsNullOrEmpty(remoteError))
             {
@@ -199,9 +239,9 @@ namespace Examen.Controllers
             return View(model);
         }
 
-        
 
-        
+
+
 
         [Route("checkemail")]
         [AllowAnonymous]
@@ -258,7 +298,7 @@ namespace Examen.Controllers
                             );
 
                     /* CODIGO PARA ENVIAR CORREO */
-                }        
+                }
                 return View(nameof(ForgetPasswordConfirmation));
             }
             return View(model);
@@ -323,6 +363,6 @@ namespace Examen.Controllers
         {
             return View();
         }
-        
+
     }
 }

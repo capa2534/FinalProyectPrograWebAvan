@@ -22,6 +22,10 @@ namespace Examen.DataAccess.Data
         public DbSet<Rol> Roles { get; set; }
 
         public DbSet<Empleado> Empleados { get; set; }
-        
+
+        public DbSet<Cliente> Clientes { get; set; }
+
+        public DbSet<Auto> Autos { get; set; }
+
     }
 }

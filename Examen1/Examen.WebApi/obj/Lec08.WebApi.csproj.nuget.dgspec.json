@@ -1,0 +1,298 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.WebApi\\Lec08.WebApi.csproj": {}
+  },
+  "projects": {
+    "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Application\\Lec08.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Application\\Lec08.Application.csproj",
+        "projectName": "Lec08.Application",
+        "projectPath": "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Application\\Lec08.Application.csproj",
+        "packagesPath": "C:\\Users\\Christian\\.nuget\\packages\\",
+        "outputPath": "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Christian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Domain\\Lec08.Domain.csproj": {
+                "projectPath": "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Domain\\Lec08.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Domain\\Lec08.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Domain\\Lec08.Domain.csproj",
+        "projectName": "Lec08.Domain",
+        "projectPath": "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Domain\\Lec08.Domain.csproj",
+        "packagesPath": "C:\\Users\\Christian\\.nuget\\packages\\",
+        "outputPath": "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Christian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Infrastructure\\Lec08.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Infrastructure\\Lec08.Infrastructure.csproj",
+        "projectName": "Lec08.Infrastructure",
+        "projectPath": "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Infrastructure\\Lec08.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Christian\\.nuget\\packages\\",
+        "outputPath": "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Christian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Application\\Lec08.Application.csproj": {
+                "projectPath": "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Application\\Lec08.Application.csproj"
+              },
+              "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Domain\\Lec08.Domain.csproj": {
+                "projectPath": "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Domain\\Lec08.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.WebApi\\Lec08.WebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.WebApi\\Lec08.WebApi.csproj",
+        "projectName": "Lec08.WebApi",
+        "projectPath": "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.WebApi\\Lec08.WebApi.csproj",
+        "packagesPath": "C:\\Users\\Christian\\.nuget\\packages\\",
+        "outputPath": "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.WebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Christian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Application\\Lec08.Application.csproj": {
+                "projectPath": "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Application\\Lec08.Application.csproj"
+              },
+              "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Domain\\Lec08.Domain.csproj": {
+                "projectPath": "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Domain\\Lec08.Domain.csproj"
+              },
+              "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Infrastructure\\Lec08.Infrastructure.csproj": {
+                "projectPath": "D:\\Source Code\\FIDELITAS\\2C-2022\\SC-701 PROGRAMACION AVANZADA EN WEB\\SEMANA 08\\Lec08 - Clase\\Lec08\\Lec08.Infrastructure\\Lec08.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

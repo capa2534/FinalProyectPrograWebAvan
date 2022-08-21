@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "\\\\Mac\\Home\\Desktop\\FinalProyectPrograWebAvan\\Examen1\\Examen.DataAccess\\Examen.DataAccess.csproj": {}
+    "\\\\Mac\\Home\\Desktop\\Proyecto\\FinalProyectPrograWebAvan\\Examen1\\Examen.DataAccess\\Examen.DataAccess.csproj": {}
   },
   "projects": {
-    "\\\\Mac\\Home\\Desktop\\FinalProyectPrograWebAvan\\Examen1\\Examen.DataAccess\\Examen.DataAccess.csproj": {
+    "\\\\Mac\\Home\\Desktop\\Proyecto\\FinalProyectPrograWebAvan\\Examen1\\Examen.DataAccess\\Examen.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\Mac\\Home\\Desktop\\FinalProyectPrograWebAvan\\Examen1\\Examen.DataAccess\\Examen.DataAccess.csproj",
+        "projectUniqueName": "\\\\Mac\\Home\\Desktop\\Proyecto\\FinalProyectPrograWebAvan\\Examen1\\Examen.DataAccess\\Examen.DataAccess.csproj",
         "projectName": "Examen.DataAccess",
-        "projectPath": "\\\\Mac\\Home\\Desktop\\FinalProyectPrograWebAvan\\Examen1\\Examen.DataAccess\\Examen.DataAccess.csproj",
+        "projectPath": "\\\\Mac\\Home\\Desktop\\Proyecto\\FinalProyectPrograWebAvan\\Examen1\\Examen.DataAccess\\Examen.DataAccess.csproj",
         "packagesPath": "C:\\Users\\ceciliano\\.nuget\\packages\\",
-        "outputPath": "\\\\Mac\\Home\\Desktop\\FinalProyectPrograWebAvan\\Examen1\\Examen.DataAccess\\obj\\",
+        "outputPath": "\\\\Mac\\Home\\Desktop\\Proyecto\\FinalProyectPrograWebAvan\\Examen1\\Examen.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ceciliano\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "\\\\Mac\\Home\\Desktop\\FinalProyectPrograWebAvan\\Examen1\\Examen.Models\\Examen.Models.csproj": {
-                "projectPath": "\\\\Mac\\Home\\Desktop\\FinalProyectPrograWebAvan\\Examen1\\Examen.Models\\Examen.Models.csproj"
+              "\\\\Mac\\Home\\Desktop\\Proyecto\\FinalProyectPrograWebAvan\\Examen1\\Examen.Models\\Examen.Models.csproj": {
+                "projectPath": "\\\\Mac\\Home\\Desktop\\Proyecto\\FinalProyectPrograWebAvan\\Examen1\\Examen.Models\\Examen.Models.csproj"
               }
             }
           }
@@ -112,14 +112,14 @@
         }
       }
     },
-    "\\\\Mac\\Home\\Desktop\\FinalProyectPrograWebAvan\\Examen1\\Examen.Models\\Examen.Models.csproj": {
+    "\\\\Mac\\Home\\Desktop\\Proyecto\\FinalProyectPrograWebAvan\\Examen1\\Examen.Models\\Examen.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\Mac\\Home\\Desktop\\FinalProyectPrograWebAvan\\Examen1\\Examen.Models\\Examen.Models.csproj",
+        "projectUniqueName": "\\\\Mac\\Home\\Desktop\\Proyecto\\FinalProyectPrograWebAvan\\Examen1\\Examen.Models\\Examen.Models.csproj",
         "projectName": "Examen.Models",
-        "projectPath": "\\\\Mac\\Home\\Desktop\\FinalProyectPrograWebAvan\\Examen1\\Examen.Models\\Examen.Models.csproj",
+        "projectPath": "\\\\Mac\\Home\\Desktop\\Proyecto\\FinalProyectPrograWebAvan\\Examen1\\Examen.Models\\Examen.Models.csproj",
         "packagesPath": "C:\\Users\\ceciliano\\.nuget\\packages\\",
-        "outputPath": "\\\\Mac\\Home\\Desktop\\FinalProyectPrograWebAvan\\Examen1\\Examen.Models\\obj\\",
+        "outputPath": "\\\\Mac\\Home\\Desktop\\Proyecto\\FinalProyectPrograWebAvan\\Examen1\\Examen.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ceciliano\\AppData\\Roaming\\NuGet\\NuGet.Config",
