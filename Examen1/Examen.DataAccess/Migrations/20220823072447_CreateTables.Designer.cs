@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Examen.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220729230222_CreateAspNetCoreIdentityScheme")]
-    partial class CreateAspNetCoreIdentityScheme
+    [Migration("20220823072447_CreateTables")]
+    partial class CreateTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,78 @@ namespace Examen.DataAccess.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.17")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("Examen.Models.DataModels.Auto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Annio")
+                        .IsRequired()
+                        .HasMaxLength(4)
+                        .HasColumnType("nvarchar(4)");
+
+                    b.Property<string>("Estado")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Marca")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Modelo")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
+
+                    b.Property<string>("Placa")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Precio")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Autos");
+                });
+
+            modelBuilder.Entity("Examen.Models.DataModels.Cliente", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Apellidos")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int>("Cedula")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CorreoElectronico")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<DateTime>("FechaNacimiento")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
+
+                    b.Property<int>("Telefono")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Clientes");
+                });
 
             modelBuilder.Entity("Examen.Models.DataModels.Empleado", b =>
                 {
@@ -70,6 +142,111 @@ namespace Examen.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Roles");
+                });
+
+            modelBuilder.Entity("Examen.Models.DataModels.Ventas", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Annio")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Cedula")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CedulaEmp")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CorreoElectronico")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Fecha_hora")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("Id_AutoId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Id_ClienteId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Id_EmpleadoId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Marca")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Modelo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NombreEmp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Placa")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Precio")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Id_AutoId");
+
+                    b.HasIndex("Id_ClienteId");
+
+                    b.HasIndex("Id_EmpleadoId");
+
+                    b.ToTable("Ventas");
+                });
+
+            modelBuilder.Entity("Examen.Models.DataTransferModels.Elemento2", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Cedula")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("VentasId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("VentasId1")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("VentasId");
+
+                    b.HasIndex("VentasId1");
+
+                    b.ToTable("Elemento2");
+                });
+
+            modelBuilder.Entity("Examen.Models.DataTransferModels.Elemento3", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Placa")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("VentasId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("VentasId");
+
+                    b.ToTable("Elemento3");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -268,6 +445,45 @@ namespace Examen.DataAccess.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Examen.Models.DataModels.Ventas", b =>
+                {
+                    b.HasOne("Examen.Models.DataModels.Auto", "Id_Auto")
+                        .WithMany()
+                        .HasForeignKey("Id_AutoId");
+
+                    b.HasOne("Examen.Models.DataModels.Cliente", "Id_Cliente")
+                        .WithMany()
+                        .HasForeignKey("Id_ClienteId");
+
+                    b.HasOne("Examen.Models.DataModels.Empleado", "Id_Empleado")
+                        .WithMany()
+                        .HasForeignKey("Id_EmpleadoId");
+
+                    b.Navigation("Id_Auto");
+
+                    b.Navigation("Id_Cliente");
+
+                    b.Navigation("Id_Empleado");
+                });
+
+            modelBuilder.Entity("Examen.Models.DataTransferModels.Elemento2", b =>
+                {
+                    b.HasOne("Examen.Models.DataModels.Ventas", null)
+                        .WithMany("Clientes")
+                        .HasForeignKey("VentasId");
+
+                    b.HasOne("Examen.Models.DataModels.Ventas", null)
+                        .WithMany("Empleados")
+                        .HasForeignKey("VentasId1");
+                });
+
+            modelBuilder.Entity("Examen.Models.DataTransferModels.Elemento3", b =>
+                {
+                    b.HasOne("Examen.Models.DataModels.Ventas", null)
+                        .WithMany("Autos")
+                        .HasForeignKey("VentasId");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -317,6 +533,15 @@ namespace Examen.DataAccess.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Examen.Models.DataModels.Ventas", b =>
+                {
+                    b.Navigation("Autos");
+
+                    b.Navigation("Clientes");
+
+                    b.Navigation("Empleados");
                 });
 #pragma warning restore 612, 618
         }

@@ -16,11 +16,11 @@ namespace Examen.Models.DataTransferModels
         /// Construye una instancia del Elemento2.
         /// </summary>
         /// <param name="id">Id único del Elemento2.</param>
-        /// <param name="nombre">Nombre del Elemento2.</param>
-        public Elemento2(int id, string nombre)
+        /// <param name="cedula">Nombre del Elemento2.</param>
+        public Elemento2(int id, int cedula)
         {
             Id = id;
-            Nombre = nombre;
+            Cedula = cedula;
         }
 
         /// <summary>
@@ -31,6 +31,6 @@ namespace Examen.Models.DataTransferModels
         /// <summary>
         /// Asigna u Obtiene el Nombre del Elemento2.
         /// </summary>
-        public string Nombre { get; set; }
+        public int Cedula { get; set; }
     }
 }

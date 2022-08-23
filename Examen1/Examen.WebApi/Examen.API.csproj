@@ -28,6 +28,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\Examen.DataAccess.csproj" />
+    <ProjectReference Include="..\Examen.Models\Examen.Models.csproj" />
   </ItemGroup>
 
 </Project>

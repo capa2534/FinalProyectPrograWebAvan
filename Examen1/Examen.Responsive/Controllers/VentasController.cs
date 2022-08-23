@@ -2,6 +2,7 @@
 using Examen.DataAccess.Repository;
 using Examen.DataAccess.Repository.UnitOfWork;
 using Examen.Models.DataModels;
+using Examen.Models.DataTransferModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,11 +30,22 @@ namespace Examen.Controllers
         public IActionResult Upsert(int? id)
         {
 
+            List<Cliente> clientes = Context.Clientes.ToList();
+            List<Auto> autos = Context.Autos.ToList();
+            List<Empleado> empleados = Context.Empleados.ToList();
 
             Ventas Ventas
                 = new Ventas
                 {
-
+                    Clientes =
+                        clientes.ConvertAll<Elemento2>
+                            (s => new Elemento2(s.Id, s.Cedula)),
+                    Autos =
+                        autos.ConvertAll<Elemento3>
+                            (s => new Elemento3(s.Id, s.Placa)),
+                    Empleados =
+                        empleados.ConvertAll<Elemento2>
+                            (s => new Elemento2(s.Id, s.Cedula)),
                 };
 
 
@@ -61,11 +73,16 @@ namespace Examen.Controllers
             {
                 if (Ventas.Id == 0)
                 {
+                    Ventas.Fecha_hora = System.DateTime.Now;
+                    Ventas.Id_Auto = Ventas.Id_Auto;
                     Repository.Insertar(Ventas);
+
+
 
                 }
                 else
                 {
+                    Ventas.Fecha_hora = System.DateTime.Now;
                     Repository.Actualizar(Ventas);
                 }
 
@@ -93,24 +110,68 @@ namespace Examen.Controllers
         }
 
         [HttpGet]
-        [Route("api/ventas/cliente")]
-        public IActionResult ListarCliente(int cliente)
+        [Route("/api/ventas/upsert/objcliente")]
+        public IActionResult ListarObjCliente(int Id)
         {
-            List<Ventas> Ventas =
-                Context.Ventas.Where(w => w.Id_Auto.Id == cliente).ToList();
+            List<Cliente> cliente =
+                Context.Clientes.Where(w => w.Id == Id).ToList();
 
             var contentido =
                 new
                 {
-                    success = Ventas != null || Ventas.Count == 0 , 
-                    content = Ventas,
+                    success = cliente != null || cliente.Count == 0,
+                    content = cliente,
                     error =
-                        Ventas == null || Ventas.Count == 0
-                            ? "No se han encontrado clientes registrados"
+                        cliente == null || cliente.Count == 0
+                            ? "No se han encontrado ningun estudiante"
                             : string.Empty
                 };
 
             return Json(contentido);
         }
+
+        [HttpGet]
+        [Route("/api/ventas/upsert/objauto")]
+        public IActionResult ListarObjAuto(int Id)
+        {
+            List<Auto> auto =
+                Context.Autos.Where(w => w.Id == Id).ToList();
+
+            var contentido =
+                new
+                {
+                    success = auto != null || auto.Count == 0,
+                    content = auto,
+                    error =
+                        auto == null || auto.Count == 0
+                            ? "No se han encontrado ningun estudiante"
+                            : string.Empty
+                };
+
+            return Json(contentido);
+        }
+
+        [HttpGet]
+        [Route("/api/ventas/upsert/objempleado")]
+        public IActionResult ListarObjEmpleado(int Id)
+        {
+            List<Empleado> empleado =
+                Context.Empleados.Where(w => w.Id == Id).ToList();
+
+            var contentido =
+                new
+                {
+                    success = empleado != null || empleado.Count == 0,
+                    content = empleado,
+                    error =
+                        empleado == null || empleado.Count == 0
+                            ? "No se han encontrado ningun estudiante"
+                            : string.Empty
+                };
+
+            return Json(contentido);
+        }
+
+
     }
 }

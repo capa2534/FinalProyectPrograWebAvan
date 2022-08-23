@@ -11,13 +11,16 @@ namespace Examen.Models.DataModels
 {
     public class Ventas
     {
-        public List<Elemento> Clientes { get; set; }
-        public List<Elemento> Empleados { get; set; }
+        public List<Elemento2> Clientes { get; set; }
+        public List<Elemento2> Empleados { get; set; }
+
+        public List<Elemento3> Autos { get; set; }
 
         public Ventas()
         {
-            Empleados = new List<Elemento>();
-            Clientes = new List<Elemento>();    
+            Empleados = new List<Elemento2>();
+            Clientes = new List<Elemento2>();
+            Autos = new List<Elemento3>();
         }
 
         public Ventas(int id)
@@ -33,8 +36,21 @@ namespace Examen.Models.DataModels
         public DateTime Fecha_hora { get; set; }    
         public Cliente Id_Cliente{ get; set; }
         public Auto Id_Auto { get; set; }
-        public Empleado Empleado { get; set; }
-        
+        public Empleado Id_Empleado { get; set; }
+
+        public int Cedula { get; set; }
+        public int CedulaEmp { get; set; }
+        public string Nombre { get; set; }
+        public string NombreEmp { get; set; }
+        public string CorreoElectronico { get; set; }
+        public string Placa { get; set; }
+        public string Marca { get; set; }
+        public string Modelo { get; set; }
+        public string Annio { get; set; }
+        public int Precio { get; set; }
+
+
+
 
     }
 }

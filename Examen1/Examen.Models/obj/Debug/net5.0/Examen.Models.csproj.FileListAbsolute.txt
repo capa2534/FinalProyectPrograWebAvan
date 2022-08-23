@@ -118,3 +118,26 @@ C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.M
 C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.dll
 C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\ref\Examen.Models.dll
 C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.pdb
+E:\DesaFinalProyect\FinalProyectPrograWebAvan\Examen1\Examen.Models\bin\Debug\net5.0\Examen.Models.deps.json
+E:\DesaFinalProyect\FinalProyectPrograWebAvan\Examen1\Examen.Models\bin\Debug\net5.0\Examen.Models.dll
+E:\DesaFinalProyect\FinalProyectPrograWebAvan\Examen1\Examen.Models\bin\Debug\net5.0\ref\Examen.Models.dll
+E:\DesaFinalProyect\FinalProyectPrograWebAvan\Examen1\Examen.Models\bin\Debug\net5.0\Examen.Models.pdb
+E:\DesaFinalProyect\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.GeneratedMSBuildEditorConfig.editorconfig
+E:\DesaFinalProyect\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.AssemblyInfoInputs.cache
+E:\DesaFinalProyect\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.AssemblyInfo.cs
+E:\DesaFinalProyect\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.csproj.CoreCompileInputs.cache
+E:\DesaFinalProyect\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.dll
+E:\DesaFinalProyect\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\ref\Examen.Models.dll
+E:\DesaFinalProyect\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.pdb
+\\Mac\Home\Desktop\FinalProyectPrograWebAvan\Examen1\Examen.Models\bin\Debug\net5.0\Examen.Models.deps.json
+\\Mac\Home\Desktop\FinalProyectPrograWebAvan\Examen1\Examen.Models\bin\Debug\net5.0\Examen.Models.dll
+\\Mac\Home\Desktop\FinalProyectPrograWebAvan\Examen1\Examen.Models\bin\Debug\net5.0\ref\Examen.Models.dll
+\\Mac\Home\Desktop\FinalProyectPrograWebAvan\Examen1\Examen.Models\bin\Debug\net5.0\Examen.Models.pdb
+\\Mac\Home\Desktop\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.csproj.AssemblyReference.cache
+\\Mac\Home\Desktop\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.GeneratedMSBuildEditorConfig.editorconfig
+\\Mac\Home\Desktop\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.AssemblyInfoInputs.cache
+\\Mac\Home\Desktop\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.AssemblyInfo.cs
+\\Mac\Home\Desktop\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.dll
+\\Mac\Home\Desktop\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\ref\Examen.Models.dll
+\\Mac\Home\Desktop\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.pdb

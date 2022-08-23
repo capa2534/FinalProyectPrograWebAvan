@@ -11,13 +11,13 @@ namespace Examen.Models.ViewModels
     {
         public EmpleadoViewModel()
         {
-            Provincias = new List<Elemento>();
+            Provincias = new List<Elemento3>();
             Saludos = new List<Elemento2>();
         }
 
         public EmpleadoInputModel Empleado { get; set; }
 
-        public List<Elemento> Provincias { get; set; }
+        public List<Elemento3> Provincias { get; set; }
 
         public List<Elemento2> Saludos { get; set; }
         //public object Saludos { get; set; } Ver porque esto estaba aqui

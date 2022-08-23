@@ -16,10 +16,10 @@ namespace Examen.Models.DataModels
         {
         }
 
-        public Auto(int id)
+        public Auto(int id, string nombre)
         {
             Id = id;
-       
+            Placa = nombre;
         }
 
         [Required]
@@ -28,6 +28,9 @@ namespace Examen.Models.DataModels
 
         [Required(ErrorMessage = "Colocar el numero de Placa.")]
         public string Placa { get; set; }
+
+        [Required(AllowEmptyStrings = false, ErrorMessage = "El Nombre de la Marca es requerido.")]
+        public string Marca { get; set; }
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "El Nombre del Modelo es requerido.")]
         [StringLength(40, MinimumLength = 3, ErrorMessage = "La longitud del Modelo debe ser entre 3 y 40 catacteres.")]
@@ -39,6 +42,8 @@ namespace Examen.Models.DataModels
 
         [Required(ErrorMessage = "El Precio es requerido")]
         public int Precio { get; set; }
+
+        public string Estado { get; set; }
 
     }
 }

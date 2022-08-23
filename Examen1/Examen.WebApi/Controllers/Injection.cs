@@ -19,10 +19,7 @@ namespace Lec10.Application
             JwtConfiguration jwtConfiguration = configuration.GetSection("JwtConfiguration").Get<JwtConfiguration>();
 
 
-            services.Configure<GoogleAuthenticationConfiguration>(configuration.GetSection("GoogleAuthenticationConfiguration"));
-            services.Configure<MyIpConfiguration>(configuration.GetSection("MyIpConfiguration"));
-            services.Configure<IpGeoLocationConfiguration>(configuration.GetSection("IpGeoLocationConfiguration"));
-            services.Configure<OpenWeatherMapConfiguration>(configuration.GetSection("OpenWeatherMapConfiguration"));
+     
             services.AddSingleton<IJwtManager, JwtManager>();
 
 

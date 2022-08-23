@@ -21,19 +21,19 @@ namespace Examen.Controllers
 
         public IActionResult Index()
         {
-            List<Elemento> lista = new List<Elemento>();
-            lista.Add(new Elemento(1, "Pan"));
-            lista.Add(new Elemento(2, "Doble Torta 1/4 libra"));
-            lista.Add(new Elemento(3, "Triple Queso Mozzarella"));
-            lista.Add(new Elemento(4, "Triple Queso Suizo"));
-            lista.Add(new Elemento(5, "Mayonesa"));
-            lista.Add(new Elemento(6, "Barbacoa"));
-            lista.Add(new Elemento(7, "Tocineta"));
-            lista.Add(new Elemento(8, "Cebolla Caramelizada"));
-            lista.Add(new Elemento(9, "Pepinillos"));
-            lista.Add(new Elemento(10, "Jalapeños"));
+            //List<Elemento3> lista = new List<Elemento3>();
+            //lista.Add(new Elemento(1, "Pan"));
+            //lista.Add(new Elemento(2, "Doble Torta 1/4 libra"));
+            //lista.Add(new Elemento(3, "Triple Queso Mozzarella"));
+            //lista.Add(new Elemento(4, "Triple Queso Suizo"));
+            //lista.Add(new Elemento(5, "Mayonesa"));
+            //lista.Add(new Elemento(6, "Barbacoa"));
+            //lista.Add(new Elemento(7, "Tocineta"));
+            //lista.Add(new Elemento(8, "Cebolla Caramelizada"));
+            //lista.Add(new Elemento(9, "Pepinillos"));
+            //lista.Add(new Elemento(10, "Jalapeños"));
 
-            return View(lista);
+            return View();
         }
 
         public IActionResult Privacy()

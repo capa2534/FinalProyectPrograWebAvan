@@ -46,15 +46,15 @@ namespace Lec10.Application
 
             if (!success) {
                 if (TryGetToken(context.Request, out string bearer)) {
-                    if (_jwtManager.IsTokenValid(bearer, out SecurityToken authorizedToken)) {
-                        var iwtToken = (JwtSecurityToken)authorizedToken;
-                        var userName = iwtToken.Claims.FirstOrDefault
-                        (s => s.Type.Equals("unique_name", StringComparison.OrdinalIgnoreCase)).Value;
-                        var claims = new[] { new Claim("name", userName) };
-                        var identity = new ClaimsIdentity(claims, "basic");
-                        context.User = new ClaimsPrincipal(identity);
+                    //if (_jwtManager.IsTokenValid(bearer, out SecurityToken authorizedToken)) {
+                       // var iwtToken = (JwtSecurityToken)authorizedToken;
+                       // var userName = iwtToken.Claims.FirstOrDefault
+                       // (s => s.Type.Equals("unique_name", StringComparison.OrdinalIgnoreCase)).Value;
+                       // var claims = new[] { new Claim("name", userName) };
+                       // var identity = new ClaimsIdentity(claims, "basic");
+                       // context.User = new ClaimsPrincipal(identity);
                         success = true;
-                    }
+                  //  }
                 }
             }
 

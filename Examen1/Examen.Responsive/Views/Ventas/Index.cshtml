@@ -20,7 +20,7 @@
 
 <div class="row">
 	<div class="col-12 text-lg-right">
-		<a href="/Ventas/upsert/" class="btn btn-dark"><i class="fa-solid fa-circle-plus"></i> &nbsp; Crear nuevo Auto</a>
+		<a href="/Ventas/upsert/" class="btn btn-dark"><i class="fa-solid fa-circle-plus"></i> &nbsp; Crear una nueva Venta</a>
 		
 	</div>
 </div>
@@ -33,42 +33,55 @@
 		<table id="Empleados" class="table table-hover table-striped container">
 			<thead class="thead-dark">
 				<tr class="text-center">
-					<th colspan="5">Autos</th>
+					<th colspan="8">Ventas</th>
 				</tr>
 			</thead>
 			<tbody class="">
 				@foreach (var Ventas in Model)
 				{
-				<tr id="Ventas_@Ventas.Id">
-					<td>
-						@Ventas.Id_Auto.Placa
-					</td>
-					<td>
-						@Ventas.Id_Auto.Modelo
-					</td>
-					<td>
-						@Ventas.Id_Auto.Annio
-					</td>
-					<td>
-						@Ventas.Id_Auto.Precio
-					</td>
-					<td>
-						<div class="text-right">
+                <tr id="Ventas_@Ventas.Id">
+                    <td>
+                        @Ventas.Id_Cliente
+                    </td>
+                    <td>
+                        @Ventas.Cedula
+                    </td>
+                    <td>
+                        @Ventas.Nombre
+                    </td>
+                    <td>
+                        @Ventas.Id_Auto
+                    </td>
+                   
+                    <td>
+                        @Ventas.Marca
+                    </td>
+                    <td>
+                        @Ventas.Modelo
+                    </td>
+                    <td>
+                        @Ventas.Annio
+                    </td>
+                    <td>
+                        @Ventas.Precio
+                    </td>
+                    <td>
+                        <div class="text-right">
 
-							<a href="/Ventas/upsert/@Ventas.Id" class="btn btn-warning text-white" style="cursor:pointer">
-								<i class="fas fa-edit"></i>
-							</a>
+                            <a href="/Ventas/upsert/@Ventas.Id" class="btn btn-warning text-white" style="cursor:pointer">
+                                <i class="fas fa-edit"></i>
+                            </a>
 
-							<a onclick=Delete("@Ventas.Id") class="btn btn-danger text-white" style="cursor:pointer">
-								<i class="fas fa-trash-alt"></i>
-							</a>
-						</div>
-					</td>
-				</tr>
+                            <a onclick=Delete("@Ventas.Id") class="btn btn-danger text-white" style="cursor:pointer">
+                                <i class="fas fa-trash-alt"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
 
 				}
 			</tbody>
-			<tbody class="">
+			@*<tbody class="">
 				@foreach (var Ventas in Model)
 				{
 				<tr id="Ventas_@Ventas.Id">
@@ -99,7 +112,7 @@
 				</tr>
 
 				}
-			</tbody>
+			</tbody>*@
 		</table>
 
 	</div>

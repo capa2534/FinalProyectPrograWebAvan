@@ -31,6 +31,13 @@ namespace Examen.DataAccess.Migrations
                         .HasMaxLength(4)
                         .HasColumnType("nvarchar(4)");
 
+                    b.Property<string>("Estado")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Marca")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Modelo")
                         .IsRequired()
                         .HasMaxLength(40)
@@ -142,8 +149,17 @@ namespace Examen.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("EmpleadoId")
+                    b.Property<string>("Annio")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Cedula")
                         .HasColumnType("int");
+
+                    b.Property<int>("CedulaEmp")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CorreoElectronico")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Fecha_hora")
                         .HasColumnType("datetime2");
@@ -154,26 +170,47 @@ namespace Examen.DataAccess.Migrations
                     b.Property<int?>("Id_ClienteId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.Property<int?>("Id_EmpleadoId")
+                        .HasColumnType("int");
 
-                    b.HasIndex("EmpleadoId");
+                    b.Property<string>("Marca")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Modelo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NombreEmp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Placa")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Precio")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("Id_AutoId");
 
                     b.HasIndex("Id_ClienteId");
 
+                    b.HasIndex("Id_EmpleadoId");
+
                     b.ToTable("Ventas");
                 });
 
-            modelBuilder.Entity("Examen.Models.DataTransferModels.Elemento", b =>
+            modelBuilder.Entity("Examen.Models.DataTransferModels.Elemento2", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Nombre")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Cedula")
+                        .HasColumnType("int");
 
                     b.Property<int?>("VentasId")
                         .HasColumnType("int");
@@ -187,7 +224,27 @@ namespace Examen.DataAccess.Migrations
 
                     b.HasIndex("VentasId1");
 
-                    b.ToTable("Elemento");
+                    b.ToTable("Elemento2");
+                });
+
+            modelBuilder.Entity("Examen.Models.DataTransferModels.Elemento3", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Placa")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("VentasId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("VentasId");
+
+                    b.ToTable("Elemento3");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -388,10 +445,6 @@ namespace Examen.DataAccess.Migrations
 
             modelBuilder.Entity("Examen.Models.DataModels.Ventas", b =>
                 {
-                    b.HasOne("Examen.Models.DataModels.Empleado", "Empleado")
-                        .WithMany()
-                        .HasForeignKey("EmpleadoId");
-
                     b.HasOne("Examen.Models.DataModels.Auto", "Id_Auto")
                         .WithMany()
                         .HasForeignKey("Id_AutoId");
@@ -400,14 +453,18 @@ namespace Examen.DataAccess.Migrations
                         .WithMany()
                         .HasForeignKey("Id_ClienteId");
 
-                    b.Navigation("Empleado");
+                    b.HasOne("Examen.Models.DataModels.Empleado", "Id_Empleado")
+                        .WithMany()
+                        .HasForeignKey("Id_EmpleadoId");
 
                     b.Navigation("Id_Auto");
 
                     b.Navigation("Id_Cliente");
+
+                    b.Navigation("Id_Empleado");
                 });
 
-            modelBuilder.Entity("Examen.Models.DataTransferModels.Elemento", b =>
+            modelBuilder.Entity("Examen.Models.DataTransferModels.Elemento2", b =>
                 {
                     b.HasOne("Examen.Models.DataModels.Ventas", null)
                         .WithMany("Clientes")
@@ -416,6 +473,13 @@ namespace Examen.DataAccess.Migrations
                     b.HasOne("Examen.Models.DataModels.Ventas", null)
                         .WithMany("Empleados")
                         .HasForeignKey("VentasId1");
+                });
+
+            modelBuilder.Entity("Examen.Models.DataTransferModels.Elemento3", b =>
+                {
+                    b.HasOne("Examen.Models.DataModels.Ventas", null)
+                        .WithMany("Autos")
+                        .HasForeignKey("VentasId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -471,6 +535,8 @@ namespace Examen.DataAccess.Migrations
 
             modelBuilder.Entity("Examen.Models.DataModels.Ventas", b =>
                 {
+                    b.Navigation("Autos");
+
                     b.Navigation("Clientes");
 
                     b.Navigation("Empleados");

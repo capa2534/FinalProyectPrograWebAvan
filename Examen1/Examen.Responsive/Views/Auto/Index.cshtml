@@ -39,32 +39,38 @@
 			<tbody class="">
 				@foreach (var Auto in Model)
 				{
-				<tr id="Auto_@Auto.Id">
-					<td>
-						@Auto.Placa
-					</td>
-					<td>
-						@Auto.Modelo
-					</td>
-					<td>
-						@Auto.Annio
-					</td>
-					<td>
-						@Auto.Precio
-					</td>
-					<td>
-						<div class="text-right">
+                <tr id="Auto_@Auto.Id">
+                    <td>
+                        @Auto.Placa
+                    </td>
+                    <td>
+                        @Auto.Marca
+                    </td>
+                    <td>
+                        @Auto.Modelo
+                    </td>
+                    <td>
+                        @Auto.Annio
+                    </td>
+                    <td>
+                        @Auto.Precio
+                    </td>
+                    <td>
+                        @Auto.Estado
+                    </td>
+                    <td>
+                        <div class="text-right">
 
-							<a href="/Auto/upsert/@Auto.Id" class="btn btn-warning text-white" style="cursor:pointer">
-								<i class="fas fa-edit"></i>
-							</a>
+                            <a href="/Auto/upsert/@Auto.Id" class="btn btn-warning text-white" style="cursor:pointer">
+                                <i class="fas fa-edit"></i>
+                            </a>
 
-							<a onclick=Delete("@Auto.Id") class="btn btn-danger text-white" style="cursor:pointer">
-								<i class="fas fa-trash-alt"></i>
-							</a>
-						</div>
-					</td>
-				</tr>
+                            <a onclick=Delete("@Auto.Id") class="btn btn-danger text-white" style="cursor:pointer">
+                                <i class="fas fa-trash-alt"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
 
 				}
 			</tbody>

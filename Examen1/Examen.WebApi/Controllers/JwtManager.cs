@@ -23,12 +23,19 @@ namespace Lec10.Application
 
         public JwtToken Authenticate(JwtUser input) {
             var handler = new JwtSecurityTokenHandler();
-            var secretKey = Encoding.UTF8.GetBytes(_configuration.Signinkey);
+            var secretKey = Encoding.UTF8.GetBytes("(nWeaEv8E=sZiIpJU-@d=[a,TPmAfo(3");
+
+            var date = DateTime.UtcNow;
+       
+
+
             var descriptor = new SecurityTokenDescriptor
             {
+                Expires = date.AddMinutes(10),
+                NotBefore = date,
                 Subject = new ClaimsIdentity
                                             (new[] { new Claim(ClaimTypes.Name, input.UserName) }),
-                Expires = DateTime.UtcNow.AddMinutes(_configuration.LifeTime),
+             
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(secretKey), SecurityAlgorithms.HmacSha256Signature)
             };
                 var token = handler.CreateToken(descriptor);

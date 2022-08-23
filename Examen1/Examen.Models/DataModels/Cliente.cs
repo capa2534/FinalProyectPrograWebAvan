@@ -16,10 +16,10 @@ namespace Examen.Models.DataModels
         {
         }
 
-        public Cliente(int id, string nombre)
+        public Cliente(int id, int cedula)
         {
             Id = id;
-            Nombre = nombre;
+            Cedula = cedula;
         }
 
         [Required]

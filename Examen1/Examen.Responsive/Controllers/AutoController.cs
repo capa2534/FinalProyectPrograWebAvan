@@ -20,6 +20,9 @@ namespace Examen.Controllers
         readonly IRepository<Auto> Repository;
         IApplicationDbContext Context;
 
+
+    
+
         public IActionResult Index(int id = 0)
         {
 
@@ -61,6 +64,7 @@ namespace Examen.Controllers
             {
                 if (Auto.Id == 0)
                 {
+                    Auto.Estado = "En Inventario";
                     Repository.Insertar(Auto);
 
                 }
