@@ -178,3 +178,21 @@ C:\Users\valer\OneDrive\Escritorio\Progra Avanzada Web\Proyecto\FinalProyectProg
 \\Mac\Home\Desktop\Proyecto\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\obj\Debug\net5.0\ref\Examen.DataAccess.dll
 \\Mac\Home\Desktop\Proyecto\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\obj\Debug\net5.0\Examen.DataAccess.pdb
 \\Mac\Home\Desktop\Proyecto\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\obj\Debug\net5.0\Examen.DataAccess.genruntimeconfig.cache
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\bin\Debug\net5.0\Examen.DataAccess.deps.json
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\bin\Debug\net5.0\Examen.DataAccess.runtimeconfig.json
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\bin\Debug\net5.0\Examen.DataAccess.runtimeconfig.dev.json
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\bin\Debug\net5.0\Examen.DataAccess.dll
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\bin\Debug\net5.0\ref\Examen.DataAccess.dll
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\bin\Debug\net5.0\Examen.DataAccess.pdb
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\bin\Debug\net5.0\Examen.Models.dll
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\bin\Debug\net5.0\Examen.Models.pdb
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\obj\Debug\net5.0\Examen.DataAccess.csproj.AssemblyReference.cache
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\obj\Debug\net5.0\Examen.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\obj\Debug\net5.0\Examen.DataAccess.AssemblyInfoInputs.cache
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\obj\Debug\net5.0\Examen.DataAccess.AssemblyInfo.cs
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\obj\Debug\net5.0\Examen.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\obj\Debug\net5.0\Examen.DataAccess.csproj.CopyComplete
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\obj\Debug\net5.0\Examen.DataAccess.dll
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\obj\Debug\net5.0\ref\Examen.DataAccess.dll
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\obj\Debug\net5.0\Examen.DataAccess.pdb
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.DataAccess\obj\Debug\net5.0\Examen.DataAccess.genruntimeconfig.cache

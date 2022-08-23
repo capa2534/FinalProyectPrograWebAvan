@@ -106,3 +106,15 @@ C:\Users\valer\OneDrive\Escritorio\Progra Avanzada Web\Proyecto\FinalProyectProg
 \\Mac\Home\Desktop\Proyecto\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.dll
 \\Mac\Home\Desktop\Proyecto\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\ref\Examen.Models.dll
 \\Mac\Home\Desktop\Proyecto\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.pdb
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.Models\bin\Debug\net5.0\Examen.Models.deps.json
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.Models\bin\Debug\net5.0\Examen.Models.dll
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.Models\bin\Debug\net5.0\ref\Examen.Models.dll
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.Models\bin\Debug\net5.0\Examen.Models.pdb
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.csproj.AssemblyReference.cache
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.AssemblyInfoInputs.cache
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.AssemblyInfo.cs
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.csproj.CoreCompileInputs.cache
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.dll
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\ref\Examen.Models.dll
+C:\Users\capa6\Desktop\New folder (3)\FinalProyectPrograWebAvan\Examen1\Examen.Models\obj\Debug\net5.0\Examen.Models.pdb

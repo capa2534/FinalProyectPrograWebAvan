@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Examen.DataAccess.Data
 {
-    public class ApplicationDbContext : /*DbContext*/ IdentityDbContext<IdentityUser>, IApplicationDbContext 
+    public class ApplicationDbContext : /*DbContext*/ IdentityDbContext<IdentityUser>, IApplicationDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -26,6 +26,7 @@ namespace Examen.DataAccess.Data
         public DbSet<Cliente> Clientes { get; set; }
 
         public DbSet<Auto> Autos { get; set; }
+        public DbSet<Ventas> Ventas {get; set;}
 
     }
 }

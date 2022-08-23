@@ -19,5 +19,8 @@ namespace Examen.DataAccess.Data
 
         DbSet<Auto> Autos { get; set; }
 
+
+        DbSet<Ventas> Ventas { get; set; }
+
     }
 }

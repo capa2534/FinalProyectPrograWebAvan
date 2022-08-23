@@ -87,7 +87,8 @@ namespace Examen
                     .AddRepository<Rol, RolRepository>()
                     .AddRepository<Cliente, ClienteRepository>()
                     .AddRepository<Auto, AutoRepository>()
-                    .AddRepository<Empleado, EmpleadoRepository>();
+                    .AddRepository<Empleado, EmpleadoRepository>()
+                    .AddRepository<Ventas, VentasRepository>();
 
             services.AddScoped<IApplicationDbContext>
                 (options => options.GetService<ApplicationDbContext>());

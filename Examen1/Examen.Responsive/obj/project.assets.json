@@ -9089,19 +9089,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ceciliano\\.nuget\\packages\\": {}
+    "C:\\Users\\capa6\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "\\\\Mac\\Home\\Desktop\\Proyecto\\FinalProyectPrograWebAvan\\Examen1\\Examen.Responsive\\Examen.Responsive.csproj",
+      "projectUniqueName": "C:\\Users\\capa6\\Desktop\\New folder (3)\\FinalProyectPrograWebAvan\\Examen1\\Examen.Responsive\\Examen.Responsive.csproj",
       "projectName": "Examen.Responsive",
-      "projectPath": "\\\\Mac\\Home\\Desktop\\Proyecto\\FinalProyectPrograWebAvan\\Examen1\\Examen.Responsive\\Examen.Responsive.csproj",
-      "packagesPath": "C:\\Users\\ceciliano\\.nuget\\packages\\",
-      "outputPath": "\\\\Mac\\Home\\Desktop\\Proyecto\\FinalProyectPrograWebAvan\\Examen1\\Examen.Responsive\\obj\\",
+      "projectPath": "C:\\Users\\capa6\\Desktop\\New folder (3)\\FinalProyectPrograWebAvan\\Examen1\\Examen.Responsive\\Examen.Responsive.csproj",
+      "packagesPath": "C:\\Users\\capa6\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\capa6\\Desktop\\New folder (3)\\FinalProyectPrograWebAvan\\Examen1\\Examen.Responsive\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ceciliano\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\capa6\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9115,11 +9115,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "\\\\Mac\\Home\\Desktop\\Proyecto\\FinalProyectPrograWebAvan\\Examen1\\Examen.DataAccess\\Examen.DataAccess.csproj": {
-              "projectPath": "\\\\Mac\\Home\\Desktop\\Proyecto\\FinalProyectPrograWebAvan\\Examen1\\Examen.DataAccess\\Examen.DataAccess.csproj"
+            "C:\\Users\\capa6\\Desktop\\New folder (3)\\FinalProyectPrograWebAvan\\Examen1\\Examen.DataAccess\\Examen.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\capa6\\Desktop\\New folder (3)\\FinalProyectPrograWebAvan\\Examen1\\Examen.DataAccess\\Examen.DataAccess.csproj"
             },
-            "\\\\Mac\\Home\\Desktop\\Proyecto\\FinalProyectPrograWebAvan\\Examen1\\Examen.Models\\Examen.Models.csproj": {
-              "projectPath": "\\\\Mac\\Home\\Desktop\\Proyecto\\FinalProyectPrograWebAvan\\Examen1\\Examen.Models\\Examen.Models.csproj"
+            "C:\\Users\\capa6\\Desktop\\New folder (3)\\FinalProyectPrograWebAvan\\Examen1\\Examen.Models\\Examen.Models.csproj": {
+              "projectPath": "C:\\Users\\capa6\\Desktop\\New folder (3)\\FinalProyectPrograWebAvan\\Examen1\\Examen.Models\\Examen.Models.csproj"
             }
           }
         }
@@ -9183,24 +9183,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.17, 5.0.17]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[5.0.0, 5.0.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -9209,7 +9191,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.409\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

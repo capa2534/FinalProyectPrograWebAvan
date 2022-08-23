@@ -47,7 +47,6 @@ namespace Examen.DataAccess.Repository
             {
                 return ordemiento(query).ToList();
             }
-
             return query.ToList();
         }
 

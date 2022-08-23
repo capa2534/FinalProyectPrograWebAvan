@@ -135,6 +135,61 @@ namespace Examen.DataAccess.Migrations
                     b.ToTable("Roles");
                 });
 
+            modelBuilder.Entity("Examen.Models.DataModels.Ventas", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("EmpleadoId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Fecha_hora")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("Id_AutoId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Id_ClienteId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmpleadoId");
+
+                    b.HasIndex("Id_AutoId");
+
+                    b.HasIndex("Id_ClienteId");
+
+                    b.ToTable("Ventas");
+                });
+
+            modelBuilder.Entity("Examen.Models.DataTransferModels.Elemento", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("VentasId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("VentasId1")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("VentasId");
+
+                    b.HasIndex("VentasId1");
+
+                    b.ToTable("Elemento");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -331,6 +386,38 @@ namespace Examen.DataAccess.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Examen.Models.DataModels.Ventas", b =>
+                {
+                    b.HasOne("Examen.Models.DataModels.Empleado", "Empleado")
+                        .WithMany()
+                        .HasForeignKey("EmpleadoId");
+
+                    b.HasOne("Examen.Models.DataModels.Auto", "Id_Auto")
+                        .WithMany()
+                        .HasForeignKey("Id_AutoId");
+
+                    b.HasOne("Examen.Models.DataModels.Cliente", "Id_Cliente")
+                        .WithMany()
+                        .HasForeignKey("Id_ClienteId");
+
+                    b.Navigation("Empleado");
+
+                    b.Navigation("Id_Auto");
+
+                    b.Navigation("Id_Cliente");
+                });
+
+            modelBuilder.Entity("Examen.Models.DataTransferModels.Elemento", b =>
+                {
+                    b.HasOne("Examen.Models.DataModels.Ventas", null)
+                        .WithMany("Clientes")
+                        .HasForeignKey("VentasId");
+
+                    b.HasOne("Examen.Models.DataModels.Ventas", null)
+                        .WithMany("Empleados")
+                        .HasForeignKey("VentasId1");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -380,6 +467,13 @@ namespace Examen.DataAccess.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Examen.Models.DataModels.Ventas", b =>
+                {
+                    b.Navigation("Clientes");
+
+                    b.Navigation("Empleados");
                 });
 #pragma warning restore 612, 618
         }
